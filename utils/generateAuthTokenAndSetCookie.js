@@ -15,13 +15,14 @@ const generateAuthTokenAndSetCookie = (user, res) => {
     expiresIn: "6d",
   });
   
-  res.cookie("jwt", token, {
-    maxAge: 6 * 24 * 60 * 60 * 1000, // 6 days
-    httpOnly: true,
-    secure: true, // Ensure HTTPS is used
-    sameSite: 'None', // Required for cross-site cookies
-    domain: '.backend_pdf-chat.com', // Ensure this matches your domain
-  });
+res.cookie("jwt", token, {
+  maxAge: 6 * 24 * 60 * 60 * 1000, // 6 days
+  httpOnly: true,
+  secure: true, // Ensure HTTPS is used
+  sameSite: 'None', // Required for cross-site cookies
+  domain: '.backend-pdfchatarif.onrender.com', // Update to match backend domain
+});
+
   
   
   
