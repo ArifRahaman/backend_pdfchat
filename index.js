@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.json());
 const allowedOrigins = [
   // process.env.FRONTEND_URL || 
-"https://frontend-pdfchat.onrender.com"
+"https://frontend-pdfchat-2.onrender.com"
 ];
 app.use(
   cors({
