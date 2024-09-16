@@ -20,8 +20,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // Serve s
 app.use(cookieParser());
 app.use(express.json());
 const allowedOrigins = [
-  // process.env.FRONTEND_URL || "https://frontendaipdfarif.onrender.com",
-  "http://localhost:5173",
+  process.env.FRONTEND_URL || "https://frontendarif.onrender.com",
 ];
 app.use(
   cors({
