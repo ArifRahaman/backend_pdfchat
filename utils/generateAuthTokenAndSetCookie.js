@@ -20,7 +20,7 @@ res.cookie("jwt", token, {
   httpOnly: true,
   secure: true, // Ensure HTTPS is used
   sameSite: 'None', // Required for cross-site cookies
-  domain: 'frontend-pdfchat-2.onrender.com', // Update to match backend domain
+  domain: 'https://backend-pdfchatarif.onrender.com', // Update to match backend domain
 });
 
   
