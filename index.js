@@ -167,7 +167,7 @@ app.post(
     const { email } = req.body;
     const filePath = req.file.path;
     // const imageUrl = `http://localhost:3001/${filePath}`;
-    const imageUrl = `https://frontend-pdfchat-2.onrender.com//${filePath}`; // Construct URL from backend
+    const imageUrl = `https://frontend-pdfchat-2.onrender.com/${filePath}`; // Construct URL from backend
     try {
       const updatedUser = await EmployeeModel.findOneAndUpdate(
         { email },
