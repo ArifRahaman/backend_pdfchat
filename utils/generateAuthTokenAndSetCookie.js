@@ -17,7 +17,7 @@ const generateAuthTokenAndSetCookie = (user, res) => {
   
 res.cookie("jwt", token, {
   maxAge: 6 * 24 * 60 * 60 * 1000, // 6 days
-  httpOnly: true,
+  httpOnly: false,
   secure: true, // Ensure HTTPS is used
   sameSite: 'None', // Required for cross-site cookies
   Domain: 'frontend-pdfchat-2.onrender.com', // Update to match backend domain
