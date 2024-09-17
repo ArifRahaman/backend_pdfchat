@@ -22,7 +22,7 @@ res.cookie("jwt", token, {
   sameSite: 'Strict', // Required for cross-site cookies
   Domain: 'frontend-pdfchat-2.onrender.com', // Update to match backend domain
 });
-
+return token;
   
   
   
