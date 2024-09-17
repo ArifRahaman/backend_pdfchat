@@ -127,36 +127,47 @@ const login = async (req, res) => {
   }
 };
 
-
 const verifyotp = async (req, res) => {
   const { email, otp } = req.body;
+  
   try {
     const user = await EmployeeModel.findOne({ email });
     if (!user) {
       console.error(`User with email ${email} not found`);
       return res.status(404).json({ message: "User not found" });
     }
+
+    // Verify OTP and check if it has not expired
     if (user.otp === otp && user.otpExpiry > Date.now()) {
       console.log(`OTP verified for user: ${email}`);
+
       try {
-       generateAuthTokenAndSetCookie(user, res);
-        // localStorage.setItem("jwt",ans);
+        // Generate token and set it in the cookie
+        const token = generateAuthTokenAndSetCookie(user, res);
+        
+        // Clear OTP and OTP expiry after successful verification
+        user.otp = null;
+        user.otpExpiry = null;
+
+        try {
+          await user.save();
+        } catch (saveError) {
+          console.error("Error saving user after OTP verification:", saveError);
+          return res.status(500).json({ error: "Error saving user data" });
+        }
+
+        // Return the token and user data in the response
+        return res.status(200).json({
+          message: "OTP verified",
+          token,  // Include the generated token
+          userId: user._id,
+          username: user.username,
+        });
+
       } catch (tokenError) {
         console.error("Error generating auth token:", tokenError);
         return res.status(500).json({ error: "Error generating auth token" });
       }
-      user.otp = null;
-      user.otpExpiry = null;
-      try {
-        await user.save();
-      } catch (saveError) {
-        console.error("Error saving user after OTP verification:", saveError);
-        return res.status(500).json({ error: "Error saving user data" });
-      }
-
-      return res
-        .status(200)
-        .json({ message: "OTP verified", userId: user._id, username: user.username,});
     } else {
       console.error(`Invalid or expired OTP for user: ${email}`);
       return res.status(400).json({ message: "Invalid or expired OTP" });
@@ -166,6 +177,7 @@ const verifyotp = async (req, res) => {
     return res.status(500).json({ error: err.message });
   }
 }
+
 
 
 
