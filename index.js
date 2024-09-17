@@ -18,6 +18,7 @@ const server = http.createServer(app);
 app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // Serve static files
 // Middleware
 app.use(cookieParser());
+//
 app.use(express.json());
 const allowedOrigins = [
   // process.env.FRONTEND_URL || 
