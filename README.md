@@ -1,6 +1,6 @@
 # PDF Chat Backend
 
-This repository contains the backend implementation for managing and interacting with PDF files and user accounts. It provides functionalities for uploading PDFs, managing user information, and handling authentication and authorization processes.
+This repository contains the backend implementation for managing and interacting with PDF files and user accounts. It provides functionalities for user authentication, PDF management, and cloud storage integration.
 
 ## Features
 
@@ -119,38 +119,43 @@ This repository contains the backend implementation for managing and interacting
 
 #### Register User
 
-- **POST** `/register`
-- Registers a new user.
+- Endpoint: `/register`
+- Method: `POST`
+- Description: Allows a new user to register.
 
 #### Login User
 
-- **POST** `/login`
-- Logs in a user and sends an OTP to their email.
+- Endpoint: `/login`
+- Method: `POST`
+- Description: Allows an existing user to log in and sends an OTP to their email.
 
-### PDFs
+### PDF Management
 
 #### Upload PDF
 
-- **POST** `/uploadPdf`
-- Uploads a PDF file for a user.
+- Endpoint: `/uploadPdf`
+- Method: `POST`
+- Description: Uploads a new PDF for a user.
 
 #### Delete PDF
 
-- **DELETE** `/deletePdf/:id`
-- Deletes a specific PDF.
+- Endpoint: `/deletePdf/:id`
+- Method: `DELETE`
+- Description: Deletes a PDF by ID.
 
-#### Get PDFs
+#### Get PDFs by User
 
-- **GET** `/getPdf/:userId`
-- Retrieves PDFs uploaded by a specific user.
+- Endpoint: `/getPdf/:userId`
+- Method: `GET`
+- Description: Retrieves all PDFs for a specified user.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
 ## License
 
 This project is licensed under the MIT License.
 
 ---
-> 🤖 *Last automated update: 2026-02-25 23:04:59*
+> 🤖 *Last automated update: 2026-02-25 23:05:43*
