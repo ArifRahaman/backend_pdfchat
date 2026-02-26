@@ -18,6 +18,7 @@ async function sendOTPEmail(userEmail, otp) {
       subject: "Your OTP Code",
       text: `Your OTP code is ${otp}`,
     };
+    //
 
     let info = await transporter.sendMail(mailOptions);
     console.log("Email sent: " + info.response);
