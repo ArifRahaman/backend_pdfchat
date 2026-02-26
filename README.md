@@ -1,6 +1,6 @@
 # PDF Chat Backend
 
-This project is a backend service for managing user registrations, PDF uploads, and basic authentication. It provides endpoints for user registration, login, OTP verification, PDF management, and more.
+This project provides a backend service for user management, PDF uploads, and authentication. It includes features such as user registration, login, OTP verification, and PDF management.
 
 ## Features
 
@@ -103,4 +103,4 @@ Contributions are welcome! Please fork the repository and create a pull request 
 This project is licensed under the MIT License.
 
 ---
-> 🤖 *Last automated update: 2026-02-27 00:20:01*
+> 🤖 *Last automated update: 2026-02-27 00:32:32*
