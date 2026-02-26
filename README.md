@@ -4,7 +4,7 @@ This repository contains the backend implementation for managing and interacting
 
 ## Features
 
-- User Registration and Login with password hashing.
+- User registration and login with password hashing.
 - OTP generation and email sending for authentication.
 - PDF file upload and management.
 - Cloud storage integration using Cloudinary.
@@ -20,8 +20,11 @@ This repository contains the backend implementation for managing and interacting
 - **Multer** for file uploads
 - **Cloudinary** for cloud storage
 - **Nodemailer** for sending emails
-- **JWT** for authentication
+- **jsonwebtoken** for authentication
 - **dotenv** for environment variable management
+- **bcrypt** for password hashing
+- **cors** for enabling CORS
+- **cookie-parser** for cookie management
 
 ## Installation Instructions
 
@@ -117,23 +120,34 @@ This repository contains the backend implementation for managing and interacting
 
 ### Endpoints
 
-- **POST** `/register`: Register a new user.
-- **POST** `/login`: Log in a user and send OTP.
-- **POST** `/upload-pdf`: Upload a PDF file.
-- **GET** `/user-pdfs/:userId`: Retrieve PDFs uploaded by a specific user.
-- **DELETE** `/delete-pdf/:id`: Delete a specific PDF.
-- **PUT** `/edit-pdf-title/:id`: Edit the title of a specific PDF.
-- **POST** `/verify-otp`: Verify the OTP sent to the user’s email.
-- **PUT** `/changepassword`: Change user password.
+- **USE** `/uploads`: Serve static files from the uploads directory.
+- **POST** `/upload`: Upload a file.
+- **GET** `/videos`: Retrieve videos.
 - **POST** `/upload-profile-image`: Upload a profile image.
+- **GET** `/search`: Search functionality.
+- **POST** `/posts/:postId/like`: Like a post.
+- **POST** `/posts/:postId/dislike`: Dislike a post.
+- **POST** `/posts/:postId/comments`: Comment on a post.
+- **PUT** `/changepassword`: Change user password.
+- **POST** `/register`: Register a new user.
+- **GET** `/pdfs/:pdfId`: Get a specific PDF.
+- **POST** `/posts`: Create a new post.
+- **GET** `/posts`: Retrieve all posts.
+- **POST** `/login`: User login.
+- **POST** `/verify-otp`: Verify OTP.
+- **GET** `/posts/by-author/:authorId`: Get posts by a specific author.
+- **PUT** `/user/:id`: Update user information.
+- **POST** `/upload-pdf`: Upload a PDF.
+- **GET** `/user-pdfs/:userId`: Retrieve PDFs uploaded by a user.
+- **DELETE** `/posts/delete/:id`: Delete a post.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
 This project is licensed under the MIT License.
 
 ---
-> 🤖 *Last automated update: 2026-02-26 10:20:00*
+> 🤖 *Last automated update: 2026-02-26 10:57:26*
