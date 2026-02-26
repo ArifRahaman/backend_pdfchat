@@ -433,7 +433,7 @@ app.delete("/posts/delete/:id", async (req, res) => {
   }
 });
 app.delete("/delete-pdf/:id", authControllerPdf.deletedPdf);
-// Edit PDF title
+
 app.put("/edit-pdf-title/:id", async (req, res) => {
   try {
     const { title } = req.body;
