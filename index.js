@@ -432,24 +432,7 @@ app.delete("/posts/delete/:id", async (req, res) => {
     console.log(err);
   }
 });
-app.delete("/delete-pdf/:id", authControllerPdf.deletedPdf);
 
-app.put("/edit-pdf-title/:id", async (req, res) => {
-  try {
-    const { title } = req.body;
-    const pdf = await PdfModel.findByIdAndUpdate(
-      req.params.id,
-      { title },
-      { new: true }
-    );
-    if (!pdf) {
-      return res.status(404).send({ message: "PDF not found" });
-    }
-    res.send({ message: "PDF title updated successfully", pdf });
-  } catch (error) {
-    res.status(500).send({ message: "Error updating PDF title" });
-  }
-});
 
 // const upload = multer({ dest: "uploads/" });
 
