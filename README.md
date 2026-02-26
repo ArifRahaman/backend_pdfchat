@@ -1,6 +1,6 @@
 # PDF Chat Backend
 
-This repository contains the backend implementation for managing and interacting with PDF files and user accounts. It offers functionalities such as user authentication, PDF management, and cloud storage integration. This backend is built using Node.js and Express.js, with MongoDB for data storage.
+This repository contains the backend implementation for managing and interacting with PDF files and user accounts. The backend offers functionalities such as user authentication, PDF management, and cloud storage integration. It is built using Node.js and Express.js, with MongoDB for data storage.
 
 ## Features
 
@@ -118,36 +118,33 @@ This repository contains the backend implementation for managing and interacting
 
 ## API Reference
 
-### Endpoints
-
-- **USE** `/uploads`: Serve static files from the uploads directory.
-- **POST** `/upload`: Upload a file.
-- **GET** `/videos`: Retrieve videos.
-- **POST** `/upload-profile-image`: Upload a profile image.
-- **GET** `/search`: Search functionality.
-- **POST** `/posts/:postId/like`: Like a post.
-- **POST** `/posts/:postId/dislike`: Dislike a post.
-- **POST** `/posts/:postId/comments`: Comment on a post.
-- **PUT** `/changepassword`: Change user password.
-- **POST** `/register`: Register a new user.
-- **GET** `/pdfs/:pdfId`: Get a specific PDF.
-- **POST** `/posts`: Create a new post.
-- **GET** `/posts`: Retrieve all posts.
-- **POST** `/login`: User login.
-- **POST** `/verify-otp`: Verify OTP.
-- **GET** `/posts/by-author/:authorId`: Get posts by a specific author.
-- **PUT** `/user/:id`: Update user information.
-- **POST** `/upload-pdf`: Upload a PDF.
-- **GET** `/user-pdfs/:userId`: Retrieve PDFs uploaded by a user.
-- **DELETE** `/posts/delete/:id`: Delete a post.
+- **USE /uploads**: Serves static files
+- **POST /upload**: Uploads a file
+- **GET /videos**: Retrieves videos
+- **POST /upload-profile-image**: Uploads a profile image
+- **GET /search**: Searches for content
+- **POST /posts/:postId/like**: Likes a post
+- **POST /posts/:postId/dislike**: Dislikes a post
+- **POST /posts/:postId/comments**: Comments on a post
+- **PUT /changepassword**: Changes the user password
+- **POST /register**: Registers a new user
+- **GET /pdfs/:pdfId**: Retrieves a specific PDF
+- **POST /posts**: Creates a new post
+- **GET /posts**: Retrieves all posts
+- **POST /login**: Logs in a user
+- **POST /verify-otp**: Verifies the OTP
+- **GET /posts/by-author/:authorId**: Retrieves posts by a specific author
+- **PUT /user/:id**: Updates a user's information
+- **POST /upload-pdf**: Uploads a PDF file
+- **GET /user-pdfs/:userId**: Retrieves PDFs uploaded by a specific user
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
 ## License
 
 This project is licensed under the MIT License.
 
 ---
-> 🤖 *Last automated update: 2026-02-26 10:57:26*
+> 🤖 *Last automated update: 2026-02-26 10:59:41*
