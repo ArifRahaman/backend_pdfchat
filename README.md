@@ -118,20 +118,22 @@ This repository contains the backend implementation for managing and interacting
 ### Endpoints
 
 - **POST** `/register`: Register a new user.
-- **POST** `/login`: Login with email and password to receive an OTP.
+- **POST** `/login`: Log in a user and send OTP.
 - **POST** `/upload-pdf`: Upload a PDF file.
-- **GET** `/pdfs/:pdfId`: Retrieve a specific PDF by its ID.
-- **DELETE** `/delete-pdf/:id`: Delete a PDF by its ID.
-- **PUT** `/edit-pdf-title/:id`: Edit the title of a PDF.
-- **GET** `/user-pdfs/:userId`: Retrieve all PDFs for a specific user.
+- **GET** `/user-pdfs/:userId`: Retrieve PDFs uploaded by a specific user.
+- **DELETE** `/delete-pdf/:id`: Delete a specific PDF.
+- **PUT** `/edit-pdf-title/:id`: Edit the title of a specific PDF.
+- **POST** `/verify-otp`: Verify the OTP sent to the user’s email.
+- **PUT** `/changepassword`: Change user password.
+- **POST** `/upload-profile-image`: Upload a profile image.
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
 
 ## License
 
 This project is licensed under the MIT License.
 
 ---
-> 🤖 *Last automated update: 2026-02-26 01:43:28*
+> 🤖 *Last automated update: 2026-02-26 10:20:00*
